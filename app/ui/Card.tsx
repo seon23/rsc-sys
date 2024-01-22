@@ -1,10 +1,9 @@
-import React from 'react';
-
 import { cn } from '@/lib/utils';
+import { HTMLAttributes, forwardRef } from 'react';
 
-const Card = React.forwardRef<
+const Card = forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+  HTMLAttributes<HTMLDivElement>
 >(function Card({ className, ...props }, ref) {
   return (
     <div
@@ -18,9 +17,9 @@ const Card = React.forwardRef<
   );
 });
 
-const CardInfo = React.forwardRef<
+const CardInfo = forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+  HTMLAttributes<HTMLDivElement>
 >(function CardInfo({ className, ...props }, ref) {
   return (
     <div
@@ -31,9 +30,9 @@ const CardInfo = React.forwardRef<
   );
 });
 
-const CardTitle = React.forwardRef<
+const CardTitle = forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
+  HTMLAttributes<HTMLHeadingElement>
 >(function CardTitle({ className, ...props }, ref) {
   return (
     <h3
@@ -47,9 +46,9 @@ const CardTitle = React.forwardRef<
   );
 });
 
-const CardDescription = React.forwardRef<
+const CardDescription = forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
+  HTMLAttributes<HTMLParagraphElement>
 >(function CardDescription({ className, ...props }, ref) {
   return (
     <p
@@ -61,9 +60,9 @@ const CardDescription = React.forwardRef<
 });
 
 // 예: <CardConent><Image/></CardConent>
-const CardContent = React.forwardRef<
+const CardContent = forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+  HTMLAttributes<HTMLDivElement>
 >(function CardContent({ className, ...props }, ref) {
   return <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />;
 });
