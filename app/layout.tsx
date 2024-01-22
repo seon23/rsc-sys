@@ -1,11 +1,3 @@
-// import {
-//   Sheet,
-//   SheetContent,
-//   SheetDescription,
-//   SheetHeader,
-//   SheetTitle,
-//   SheetTrigger,
-// } from '@/app/ui/sheet';
 // import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import type { Metadata } from 'next';
 
@@ -29,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <header className='grid grid-cols-3 gap-3 bg-slate-400'>
+        <header className='grid grid-cols-3 gap-3 bg-slate-400 p-2 overflow-hidden'>
           {/* <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
@@ -44,20 +36,6 @@ export default function RootLayout({
               d='M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5'
             />
           </svg> */}
-          {/* <Sheet>
-            <SheetTrigger>
-              <HamburgerMenuIcon width='20' height='20' />
-            </SheetTrigger>
-            <SheetContent side='left'>
-              <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
-                <SheetDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet> */}
           <SheetDemo />
           <h1>강의실예약시스템</h1>
           <span>

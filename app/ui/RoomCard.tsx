@@ -1,34 +1,32 @@
 import Image from 'next/image';
 
+import { ComponentProps } from 'react';
+
+import { cn } from '@/lib/utils';
+
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardInfo,
+  CardHeader as CardInfo,
   CardTitle,
-} from './card';
+} from '../../components/ui/card';
 import { Room } from '../_lib/utils';
 
-interface RoomCardProps extends React.ComponentProps<typeof Card> {
+interface RoomCardProps extends ComponentProps<typeof Card> {
   roomData: Room;
 }
 
-// required props: Image src, alt, title, description
-export default function RoomCard({ className, roomData}: RoomCardProps) {
+export default function RoomCard({ className, roomData }: RoomCardProps) {
   return (
-    <Card className={className}>
-      <CardContent className='h-72 w-full object-cover relative'>
-        <Image
-          src={roomData.url}
-          alt={roomData.title}
-          fill={true}
-        />
-      </CardContent>
-      <CardInfo>
-        <CardTitle className='md:text-2xl'>강의실 {roomData.id}</CardTitle>
-        <CardDescription className='truncate'>
-          {roomData.title}
-        </CardDescription>
+    <Card className={cn('overflow-hidden', className)}>
+      <div className='p-6 pt-0 h-72 w-full object-cover relative'>
+        <Image src={roomData.url} alt={roomData.title} fill={true} />
+      </div>
+      <CardInfo className='space-y-2.5'>
+        <CardTitle className='text-lg tracking-wide md:text-2xl'>
+          강의실 {roomData.id}
+        </CardTitle>
+        <CardDescription className='truncate'>{roomData.title}</CardDescription>
       </CardInfo>
     </Card>
   );

@@ -12,9 +12,11 @@ export default async function Home() {
       {/* Gallery 형태*/}
       <div className='py-1 grid md:grid-cols-2 md:px-1 xl:grid-cols-3'>
         {rooms.map((room) => (
-          <Link key={room.id} href='#' className='my-2 md:mx-2'>
-            <RoomCard roomData={room} className=''/>
-          </Link>
+          <div key={room.id} className='overflow-hidden my-2 md:mx-2'>
+            <Link href='#'>
+              <RoomCard roomData={room} />
+            </Link>
+          </div>
         ))}
       </div>
     </main>

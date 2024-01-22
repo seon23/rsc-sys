@@ -1,4 +1,4 @@
-import { Sheet, SheetContent, SheetTrigger } from '@/app/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 import ProfileCard from './ProfileCard';
