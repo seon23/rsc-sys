@@ -1,7 +1,6 @@
 'use client';
 
 import { Calendar } from '@/components/ui/calendar';
-import CheckReservation from '@/components/ui/checkReservation';
 import Time from '@/components/ui/timeButton';
 import { differenceInCalendarDays } from 'date-fns';
 
@@ -24,7 +23,6 @@ export default function calendarPage() {
         disabled={isPasteDate}
       />
       <Time />
-      <CheckReservation />
     </>
   );
 }
