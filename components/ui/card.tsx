@@ -82,5 +82,5 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter
+  CardFooter,
 };
