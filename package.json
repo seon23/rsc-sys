@@ -23,6 +23,7 @@
     "date-fns": "^3.3.0",
     "lucide-react": "^0.311.0",
     "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.5",
     "react": "^18",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18",
