@@ -15,9 +15,7 @@ export default async function RSVTest() {
   console.log('user: ', user);
   return (
     <div>
-      <h1>
-        {user?.email}::{user?.id}::{user?.name}
-      </h1>
+      <h1>{user?.name}</h1>
       <div className='relative w-[50px] h-[50px] overflow-hidden rounded-full'>
         <Button variant='outline' className='border-none'>
           <Image
