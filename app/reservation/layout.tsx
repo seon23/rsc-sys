@@ -6,5 +6,5 @@ export default function CalendarLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return <div className='py-12'>{children}</div>;
 }

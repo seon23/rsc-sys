@@ -1,0 +1,28 @@
+{
+  "reservations": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "room_id": 1,
+      "date": "2024-01-27",
+      "startTime": 13,
+      "endTime": 15
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "room_id": 1,
+      "date": "2024-01-27",
+      "startTime": 9,
+      "endTime": 10
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "room_id": 1,
+      "date": "2024-01-27",
+      "startTime": 17,
+      "endTime": 20
+    }
+  ]
+}

@@ -1,19 +1,23 @@
+import { promises as fs } from 'fs';
+
 export type Room = {
-  albumId: number;
   id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
+  name: string;
+  image: string;
 };
 
 export const getRooms = async (): Promise<Room[]> => {
-  const res = await fetch(
-    'https://jsonplaceholder.typicode.com/photos?albumId=1'
+  const file = await fs.readFile(
+    process.cwd() + '/app/_lib/sample-rooms.json',
+    'utf8'
   );
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
+  const { rooms } = JSON.parse(file);
+  return rooms;
 };
+
+// export const getRooms = async (): Promise<Room[]> => {
+//   const res = await fetch(
+//     'https://jsonplaceholder.typicode.com/photos?albumId=1'
+//   );
+//   return res.json();
+// };
