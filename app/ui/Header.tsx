@@ -20,13 +20,15 @@ export default async function Header() {
           <>
             {/* <UserAvatar/> */}
             <div className='relative h-10 w-10 shrink-0 overflow-hidden rounded-full'>
-              <Image
-                //   user.profileImg
-                src='https://via.placeholder.com/150/92c952'
-                alt='Profile Image'
-                width={40}
-                height={40}
-              />
+              <Link href='/my'>
+                <Image
+                  //   user.profileImg
+                  src='https://via.placeholder.com/150/92c952'
+                  alt='Profile Image'
+                  width={40}
+                  height={40}
+                />
+              </Link>
             </div>
             {/* replace this with hover card */}
             <form

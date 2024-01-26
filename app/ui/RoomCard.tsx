@@ -20,13 +20,13 @@ export default function RoomCard({ className, roomData }: RoomCardProps) {
   return (
     <Card className={cn('overflow-hidden', className)}>
       <div className='p-6 pt-0 h-72 w-full object-cover relative'>
-        <Image src={roomData.url} alt={roomData.title} fill={true} />
+        <Image src={roomData.image} alt={roomData.name} fill={true} />
       </div>
       <CardInfo className='space-y-2.5'>
         <CardTitle className='text-lg tracking-wide md:text-2xl'>
-          강의실 {roomData.id}
+          {roomData.name}
         </CardTitle>
-        <CardDescription className='truncate'>{roomData.title}</CardDescription>
+        <CardDescription className='truncate'>{roomData.name}</CardDescription>
       </CardInfo>
     </Card>
   );

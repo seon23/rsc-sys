@@ -19,8 +19,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang='en'>
       <body className={inter.className}>
         <Header />
-        <main className='pt-16'>{children}</main>
-        <footer className='grid grid-cols-3 gap-3 bg-slate-400'>Footer</footer>
+        {/* <main>{children}</main> */}
+        <div className='pt-20'>
+          {children}
+        </div>
       </body>
     </html>
   );
