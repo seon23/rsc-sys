@@ -13,7 +13,7 @@ export function NavModal() {
         </Button>
       </SheetTrigger>
       <SheetContent side='left' className='w-80 pt-12'>
-        <ul className='list-none m-2'>
+        <ul className='list-none m-2 flex flex-col items-center'>
           <li>
             <Link href='/'>Home</Link>
           </li>
