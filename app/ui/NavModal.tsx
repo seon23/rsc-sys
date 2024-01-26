@@ -6,7 +6,7 @@ import ProfileCard from './ProfileCard';
 
 export function NavModal() {
   return (
-    <Sheet defaultOpen={true}>
+    <Sheet>
       <SheetTrigger asChild>
         <Button variant='link' size='icon'>
           <HamburgerMenuIcon className='w-6 h-6' />
