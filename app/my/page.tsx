@@ -10,7 +10,7 @@ export default async function Home() {
   //   console.log('user: ', user);
   return (
     <div>
-      <h1>닉네임: {user?.name}</h1>
+      <h1 className='text-center'>닉네임: {user?.name}</h1>
     </div>
   );
 }

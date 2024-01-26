@@ -12,18 +12,22 @@ export default async function RoomDetail({
   const session = await auth();
   if (!session) return redirect('/api/auth/signin');
 
-  //   const { user } = session;
-  //   console.log('user: ', user);
   const rooms = await getRooms();
   const room = rooms.find((room) => room.id === Number(roomId));
   if (!room) return notFound;
+  //   const { id: currRoomId } = room;
 
+  //   const reservations = await getReservatioons();
+  //   const reservation = reservations?.find(
+  //     (reservation) => reservation.room_id === currRoomId
+  //   );
   return (
     <>
       <div className='container mx-auto'>
-        <h1 className='text-3xl'>{room.name}</h1>
+        <h1 className='text-3xl text-center'>{room.name}</h1>
         <br />
         <CalendarPage />
+        {/* {reservation?.date} {reservation?.time}:00 */}
       </div>
     </>
   );
